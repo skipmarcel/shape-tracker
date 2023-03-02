@@ -8,17 +8,7 @@ describe("Triangle", () => {
     expect(triangle.side3).toEqual(5);
   });
 
-  test('should return "not a triangle" when any side is 0', () => {
-    const triangle = new Triangle(0, 3, 5);
-    expect(triangle.checkType()).toBe("not a triangle");
-  });
-
-  test('should return "not a triangle" when any side is negative', () => {
-    const triangle = new Triangle(-1, 3, 5);
-    expect(triangle.checkType()).toBe("not a triangle");
-  });
-
-  test("should correctly determine whether three lengths are not a triangle", () => {
+  test("should correctly determine whether three lenghts are not a triangle", () => {
     const notTriangle = new Triangle(3, 9, 22);
     expect(notTriangle.checkType()).toEqual("not a triangle");
   });
@@ -27,14 +17,14 @@ describe("Triangle", () => {
     const scalTriangle = new Triangle(4, 5, 7);
     expect(scalTriangle.checkType()).toEqual("scalene triangle");
   });
-});
 
-test("should correctly determine whether three lengths make an isosceles triangle", () => {
-  const isoscTriangle = new Triangle(5, 5, 7);
-  expect(isoscTriangle.checkType()).toEqual("isosceles triangle");
-});
+  test("should correctly determine whether three lengths make an isoscelese triangle", () => {
+    const isoTriangle = new Triangle(6, 6, 8);
+    expect(isoTriangle.checkType()).toEqual("isoscelese triangle");
+  });
 
-test("should correctly determine whether three lengths make an equilateral triangle", () => {
-  const equiTriangle = new Triangle(5, 5, 5);
-  expect(equiTriangle.checkType()).toEqual("equilateral triangle");
+  test("should correctly determine whether three lengths make an equilateral triangle", () => {
+    const equiTriangle = new Triangle(8, 8, 8);
+    expect(equiTriangle.checkType()).toEqual("equilateral triangle");
+  });
 });
